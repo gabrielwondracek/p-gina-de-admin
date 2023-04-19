@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+    box-sizing: border-box; /*Com esse comando qualquer largura que estiver sobrando, encolherá*/
+}
+
+/*Defini margin, top e left como 0*/
+body {
+    margin: 0;
+    top: 0;
+    left: 0;
+    cursor: default;
+}
+
+/*Configuração da div maior*/
+.tela-login{
+    width: 150;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Propriedade particular para resolução de computador, centralizando todo o conteúdo*/
+.left-login{
+    width: 50vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: white;
+}
+
+/*Alinhando o card-login*/
+.right-login{
+    width: 85vh;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Nele está sendo alinhado o texto, os inputs, o botão para ser feito o login*/
+.card-login{
+    height: 650px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 25px;
+    background-color:#333;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #030303;
+}
+
+/*Define o estilo do título 'CADASTRE-SE'*/
+.card-login h1 {
+    color:  white;
+    font-weight: 800;
+    margin: 0;
+    border: 1px #fff solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+/*Estilo de 'Já possui uma conta?'*/
+.card-login a {
+    color:  white;
+    font-weight: 800;
+    padding-top: 9px;
+    text-decoration: none;
+}
+
+.texto {
+    display: display;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.pesquisarr {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.lupa {
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+}
+
+/*Define os campos de nome, senha e e-mail*/
+.textfield1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+/*Define o estilo do input*/
+.textfield1 .pesquisarr input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #333;
+    color:#fff;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*Definindo o estilo das legendas nome, senha e e-mail*/
+.textfield1 .texto label {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/*Estilizando input*/
+.textfield1 .pesquisarr input::placeholder{
+    color: #fff;
+}
+
+/*Define os campos de nome, senha e e-mail*/
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;/*inicia da div*/
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+/*Define o estilo do input*/
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #333;
+    color:#fff;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*Definindo o estilo das legendas nome, senha e e-mail*/
+.textfield > label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/*Estilizando input*/
+.textfield > input::placeholder{
+    color: #fff;
+}
+
+/*Definindo estilos do botão para o usuário ao concluir login, entrar na sua conta*/
+.btn-login1{
+    width: 80%;
+    margin: 5px;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: rgb(48, 154, 84);
+    box-shadow: 0px 10px 40px -12px #3cc085 ;
+}
+
+.btn-login2{
+    width: 80%;
+    margin: 5px;
+    padding: 16px 0px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: rgb(146, 50, 50);
+    box-shadow: 0px 10px 40px -12px #cb5548;
+}
+
+/*Deixando responsivo, para celular*/
+@media only screen and (max-width:950px){ /*Informando que enquanto for na tela uma largura de 950px, irá adicionar os elementos abaixo*/
+    .card-login{
+        width: 85%;
+    }
+}
+
+/*Deixando alinhado para celular, em coluna, ajustando as larguras*/
+@media only screen and (max-width:600px){
+    .tela-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+    }
+    .left-login{
+        width: 95%;
+        height: auto;
+    }
+    .right-login{
+        width: 95%;
+        height: auto;
+    }
+    .mulheroculos2{
+        width: 45vw;
+    }
+    .card-login{
+        width: 90;
+    }
+}
